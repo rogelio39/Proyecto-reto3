@@ -76,14 +76,15 @@ li {
 }
 
 
-.main__title {
+.main__getStarted h2 {
     font-size: 1.7rem;
     margin-bottom: 2.5rem;
 }
 
-.main__text {
+.main__getStarted p {
     font-size: 0.9rem;
     margin-bottom: 3rem;
+    color: var(--VeryDarkCyan);
 }
 
 
@@ -117,55 +118,57 @@ li {
 }
 
 
+.main__stadistics{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
 .main__communities {
     margin: auto;
+    margin-bottom: 3rem;
 }
 
 .main__communities img {
     width: 20%;
     display: flex;
-    justify-content: flex-start;
     margin-bottom: 10px;
 }
 
 .main__communities h2 {
     font-size: 3rem;
     color: var(--VeryDarkCyan);
-    margin-bottom: 10px;
     font-weight: 700;
 }
 
 .main__communities p {
     font-size: 0.8rem;
     color: rgba(0, 0, 0, 0.516);
-    margin-bottom: 3rem;
 }
-
 
 .main__messages {
     margin: auto;
+    margin-bottom: 3rem;
 }
-
 
 .main__messages img {
     width: 20%;
     display: flex;
-    justify-content: flex-start;
     margin-bottom: 10px;
 }
 
 .main__messages h2 {
     font-size: 2.7rem;
     color: var(--VeryDarkCyan);
-    margin-bottom: 10px;
     font-weight: 700;
-    width: 40vw;
 }
 
 .main__messages p {
     font-size: 0.8rem;
     color: rgba(0, 0, 0, 0.516);
 }
+
+
 
 
 .main__growTogether {
@@ -180,7 +183,6 @@ li {
 
 .imgGrow {
     width: 100%;
-    background-color: var(--VeryPaleBlue);
     padding: 4rem;
 }
 
@@ -277,7 +279,7 @@ li {
 
 
 
-.main__getStarted {
+.main__getStarted{
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -303,11 +305,10 @@ li {
 }
 
 
-/* .footer{
-    display: flex;
-    flex-direction: column;
-} */
-
+.footer{
+    margin-top: 20rem;
+    position: relative;
+}
 
 .footer__newsLetter{
     background-color: var(--VeryDarkCyan);
@@ -318,7 +319,16 @@ li {
     text-align: start;
 }
 
+.footer__topImg{
+    width: 100%;
+    position: absolute;
+    top: -50px;
+    
+}
+
+
 .footer__newsLetter h2, p{
+    padding-top: 20px;
     color: white;
 }
 
@@ -395,3 +405,148 @@ li {
     font-size: 1.5rem;
 }
 
+
+
+
+@media (min-width:1440px){
+
+    .header__nav ul {
+        padding: 4rem 4rem 1rem 4rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .header__nav li {
+        color: var(--LightPink);
+        display: flex;
+        gap: 5px;
+    }
+    
+    .header__btn.icon {
+        height: 3.3vh;
+    }
+    
+    
+    .header__btn.button {
+        font-size: 1.2rem;
+        width: 12%;
+        padding: 12px;
+        border-radius: 30px;
+        border: var(--LightPink) 2px solid;
+        display: flex;
+        justify-content: center;
+        font-weight: 700;
+    }
+
+    .main{
+        padding: 4rem 0rem 0 0rem;
+    
+    }
+    
+
+    .main__getStarted h2{
+        font-size: 2.8rem;
+        font-weight: 800;
+        margin-bottom: 0;
+    }
+
+    .main__getStarted p{
+        text-align: center;
+        font-size: 1.6rem;
+        padding: 0 8rem 0 8rem;
+    }
+
+    .main__btn{
+        border-radius: 60px;
+        font-size: 1.8rem;
+        width: 45%;
+        padding: 2.2rem;
+        margin-bottom: 0;
+    }
+
+
+    .main__mockup img{
+        width: 100%;
+        padding: 0 10rem 0 10rem;
+    }
+
+    .main__stadistics{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 5rem;
+}
+
+    .main__communities h2{
+        font-size: 6rem;
+    }
+
+    .main__communities p{
+        font-size: 1.4rem;
+    }
+
+    .main__messages{
+        margin: auto;
+    }
+
+    .main__messages h2{
+        font-size: 5.7rem;
+    }
+    
+    .main__messages p{
+        font-size: 1.4rem;
+    }
+
+
+
+
+    .main__growSection{
+        padding: 2rem;
+        display: grid;
+        grid-template-columns: 20vw 80vw;
+        grid-template-columns: auto;
+
+        grid-template-areas: 
+        
+        ". img"
+        "titulo img"
+        "texto img"
+        ". img"
+        ;
+    }
+
+
+    .imgTop{
+        width: 100%;
+        position: relative;
+        top: 10px;
+    }
+
+    .imgGrow{
+        width: 47vw;
+        grid-area: img;
+
+    }
+    
+    .main__growTogether h2{
+        grid-area: titulo;
+        font-size: 3rem;
+        text-align: justify;
+        padding: 0 1rem 0 4rem;
+    }
+
+    .main__growTogether p{
+        grid-area: texto;
+        font-size: 1.3rem;
+        padding: 0 1rem 0 4rem;
+        text-align: justify;
+    }
+
+
+    .imgBottom{
+        width: 100%;
+    }
+
+}
